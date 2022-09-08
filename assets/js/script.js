@@ -13,7 +13,6 @@ var createTask = function(taskText, taskDate, taskList) {
   // append span and p element to parent li
   taskLi.append(taskSpan, taskP);
 
-
   // append to ul list on the page
   $("#list-" + taskList).append(taskLi);
 };
@@ -44,7 +43,6 @@ var loadTasks = function() {
 var saveTasks = function() {
   localStorage.setItem("tasks", JSON.stringify(tasks));
 };
-
 
 // modal was triggered
 $("#task-form-modal").on("show.bs.modal", function() {
@@ -112,7 +110,11 @@ $(".list-group").on("blur", "textarea", function() {
   var index = $(this)
     .closest(".list-group-item")
     .index();
-    
+  
+  // update task in array and re-save to localStorage
+  tasks[status][index].text = text;
+  saveTasks();
+  
   // recreate p element
   var taskP = $("<p>")
     .addClass("m-1")
@@ -146,8 +148,7 @@ $(".list-group").on("click", "span", function() {
 $(".list-group").on("blur", "input[type='text']", function() {
   // get current text
   var date = $(this)
-    .val()
-
+    .val();
 
   // get the parent ul's id attribute
   var status = $(this)
@@ -172,7 +173,6 @@ $(".list-group").on("blur", "input[type='text']", function() {
   // replace input with span element
   $(this).replaceWith(taskSpan);
 });
-
 
 // remove all tasks
 $("#remove-tasks").on("click", function() {
