@@ -1,0 +1,9 @@
+{
+    "name": "Notetaker",
+    "short_name": "Notetaker",
+    "start_url": "index.html",
+    "scope": "./",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+  }
