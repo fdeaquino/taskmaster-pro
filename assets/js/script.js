@@ -59,16 +59,16 @@ $("#task-form-modal").on("shown.bs.modal", function () {
   $("#modalTaskDescription").trigger("focus");
 });
 
-var auditTask = function(taskEl) {
+var auditTask = function (taskEl) {
   // get date from task element
   var date = $(taskEl).find("span").text().trim();
 
   // convert to moment object at 5:00pm
   var time = moment(date, "L").set("hour", 17);
-  
+
   // remove any old classes from element
   $(taskEl).removeClass("list-group-item-warning list-group-item-danger");
-  
+
   // apply new class if task is near/over due date
   if (moment().isAfter(time)) {
     $(taskEl).addClass("list-group-item-danger")
@@ -165,7 +165,7 @@ $(".list-group").on("click", "span", function () {
   // enable jquery ui datepicker
   dateInput.datepicker({
     minDate: 1,
-    onClose: function() {
+    onClose: function () {
       // when the calendar is closed, force a "change" event on the 'dateInput'
       $(this).trigger("change");
     }
@@ -261,7 +261,7 @@ $(".card .list-group").sortable({
 
       // add task data to the temp array as an object
       tempArr.push({
-        text: text, 
+        text: text,
         date: date
       });
     });
@@ -271,9 +271,9 @@ $(".card .list-group").sortable({
       .attr("id")
       .replace("list-", "");
 
-      // update array on tasks object and save
-      tasks[arrName] = tempArr;
-      saveTasks();
+    // update array on tasks object and save
+    tasks[arrName] = tempArr;
+    saveTasks();
     console.log(tempArr);
   }
 });
@@ -281,16 +281,16 @@ $(".card .list-group").sortable({
 $("#trash").droppable({
   accept: ".card .list-group-item",
   tolerance: "touch",
-  drop: function(event, ui) {
+  drop: function (event, ui) {
     ui.draggable.remove();
     console.log("drop");
     $("bottom-trash").removeClass("bottom-trash-active");
   },
-  over: function(event, ui) {
+  over: function (event, ui) {
     console.log("over");
     $("bottom-trash").addClass("bottom-trash-active");
   },
-  out: function(event, ui) {
+  out: function (event, ui) {
     console.log("out");
     $("bottom-trash").removeClass("bottom-trash-active");
   }
@@ -300,8 +300,19 @@ $("#modalDueDate").datepicker({
   minDate: 1
 });
 
-setInterval(function() {
-  $(".card .list-group-item").each(function(index, el) {
+setInterval(function () {
+  $(".card .list-group-item").each(function (index, el) {
     auditTask(el);
   });
-}, (1000 *60) * 30);
+}, (1000 * 60) * 30);
+
+if ('serviceWorker' in navigator) {
+  // declaring scope manually
+  navigator.serviceWorker.register('./sw.js').then((registration) => {
+    console.log('Service worker registration succeeded:', registration);
+  }, /*catch*/(error) => {
+    console.error(`Service worker registration failed: ${error}`);
+  });
+} else {
+  console.error('Service workers are not supported.');
+}
