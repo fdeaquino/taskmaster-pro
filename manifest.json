@@ -1,17 +1,17 @@
 {
     "name": "Notetaker",
     "short_name": "Notetaker",
-    "start_url": "/",
+    "start_url": "/index.html",
     "scope": "/",
     "icons": [
         {
-            "src": "assets/images/taskmasterproicon1.png",
+            "src": "/assets/images/taskmasterproicon1.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"
         }
     ],
-    "theme_color": "#ffffff",
+    "theme_color": "#343a40",
     "background_color": "#ffffff",
     "orientation": "portrait",
     "display": "standalone"
