@@ -79,8 +79,8 @@ h6 {
     border-radius: 8px;
   }
 
-/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
-@media screen and (max-width: 575px) {
+/* MEDIA QUERY FOR MOBILE TABLETS, PHONES AND SMALLER */
+@media screen and (max-width: 1200px) {
   .instructions {
     display: none;
   }
