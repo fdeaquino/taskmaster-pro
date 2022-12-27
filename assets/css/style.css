@@ -70,12 +70,12 @@ h6 {
 #create-task,
   #remove-tasks {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     max-width: 100%;
     justify-content: center;
     margin: .3rem;
-    max-height: 30%;
+    height: 3rem;
     border-radius: 8px;
   }
 
