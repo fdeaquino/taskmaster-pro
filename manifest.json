@@ -6,9 +6,9 @@
     "icons": [
         {
             "src": "assets/images/taskmasterproicon1.png",
-            "sizes": "210x210",
+            "sizes": "512x512",
             "type": "image/png",
-            "purpose": "maskable"
+            "purpose": "any maskable"
         }
     ],
     "theme_color": "#ffffff",
