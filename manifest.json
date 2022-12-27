@@ -1,7 +1,7 @@
 {
     "name": "Notetaker",
     "short_name": "Notetaker",
-    "start_url": "/taskmaster-pro",
+    "start_url": "/",
     "scope": "/",
     "icons": [
         {
