@@ -6,7 +6,12 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Staatliches", sans-serif;
 }
 
@@ -37,7 +42,8 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(234, 0, 39, 1);
 }
 
-.btn-add, .btn-save {
+.btn-add,
+.btn-save {
   background-color: #FA8BFF;
   background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
   transition: all .5s ease-out;
@@ -45,7 +51,8 @@ h1, h2, h3, h4, h5, h6 {
   background-position: 0 -10px;
 }
 
-.btn-close, .btn-delete {
+.btn-close,
+.btn-delete {
   background-color: #EA0028;
   background-image: linear-gradient(180deg, #FF9A8B 0%, #EA0028 100%);
   transition: all .5s ease-out;
@@ -53,7 +60,56 @@ h1, h2, h3, h4, h5, h6 {
   background-position: 0 -10px;
 }
 
-.btn-add:hover, .btn-save:hover, .btn-close:hover, .btn-delete:hover {
+.btn-add:hover,
+.btn-save:hover,
+.btn-close:hover,
+.btn-delete:hover {
   background-position: 1px -50px;
 }
 
+#create-task,
+  #remove-tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    justify-content: center;
+    margin: .3rem;
+    max-height: 30%;
+    border-radius: 8px;
+  }
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+  .instructions {
+    display: none;
+  }
+
+  #create-task,
+  #remove-tasks {
+    display: flex;
+    align-items: center;
+    max-width: 50%;
+    justify-content: center;
+    margin: .3rem;
+    max-height: 30%;
+    border-radius: 8px;
+  }
+
+  .btn-block+.btn-block {
+    margin-top: 0;
+  }
+
+  .btn span {
+    font-size: 10px;
+  }
+
+  .p-4 {
+    padding: 1.3rem !important;
+  }
+
+  .m-5 {
+    margin: 1rem !important;
+  }
+
+}
