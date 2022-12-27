@@ -2,7 +2,6 @@
     "name": "Notetaker",
     "short_name": "Notetaker",
     "start_url": "taskmaster-pro/",
-    "scope": "/",
     "icons": [
         {
             "src": "assets/images/taskmasterproicon1.png",
