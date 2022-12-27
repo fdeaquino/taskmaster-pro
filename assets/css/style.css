@@ -64,7 +64,7 @@ h6 {
 .btn-save:hover,
 .btn-close:hover,
 .btn-delete:hover {
-  background-position: 1px -50px;
+  background-position: -50px;
 }
 
 #create-task,
