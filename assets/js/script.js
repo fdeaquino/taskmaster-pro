@@ -306,3 +306,13 @@ setInterval(function () {
   });
 }, (1000 * 60) * 30);
 
+if ('serviceWorker' in navigator) {
+  // declaring scope manually
+  navigator.serviceWorker.register('./sw.js').then((registration) => {
+    console.log('Service worker registration succeeded:', registration);
+  }, /*catch*/(error) => {
+    console.error(`Service worker registration failed: ${error}`);
+  });
+} else {
+  console.error('Service workers are not supported.');
+}
