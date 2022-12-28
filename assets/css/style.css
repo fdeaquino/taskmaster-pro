@@ -89,7 +89,7 @@ h6 {
   #remove-tasks {
     display: flex;
     align-items: center;
-    max-width: 50%;
+    /* max-width: 50%; */
     justify-content: center;
     margin: .3rem;
     max-height: 30%;
