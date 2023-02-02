@@ -3,7 +3,7 @@
 ## Description
 Taskmaster Pro is a time management tool that enables users to create tasks with descriptive details and deadlines. The tasks are saved in and can be deleted from the browser's Local Storage. 
 
-During my bootcamp, I was initially introduced to this project as a guided exercise. Through this project, I gained a deeper understanding of various UX/UI concepts, such as drag and drop functionality, responsive design, and data persistence. Later in the bootcamp, I learned about Progressive Web Applications and went back to this web app to make it a PWA, which can be used on mobile devices. The biggest challenge I faced in the project was fixing the service worker to function correctly on the browser, leading to the app being installable only on mobile phones (iPhone) but not on desktop computers.
+During my bootcamp, I was initially introduced to this project as a guided exercise. Through this project, I gained more practice writing JavaScript as well as a deeper understanding of various UX/UI concepts, such as drag and drop functionality, responsive design, and data persistence. Later in the bootcamp, I learned about Progressive Web Applications and returned to this web app to convert it into a PWA, which can be downloaded on mobile devices. The biggest challenge I faced while working on the project was fixing the service worker to function correctly on the browser, leading to the app being installable only on mobile phones (iPhone) but not on desktop computers.
 
 ## Table of Contents
 
